@@ -1,0 +1,12 @@
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\IMClassLibrary.dll
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\IMClassLibrary.pdb
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\Dapper.dll
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\Dapper.xml
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\System.Data.SQLite.xml
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\obj\Debug\IMClassLibrary.csprojAssemblyReference.cache
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\obj\Debug\IMClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\obj\Debug\IMClassLibrary.csproj.CopyComplete
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\obj\Debug\IMClassLibrary.dll
+C:\Users\Sikoz\source\repos\InventoryManagerSolution\IMClassLibrary\obj\Debug\IMClassLibrary.pdb
