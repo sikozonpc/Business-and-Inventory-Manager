@@ -1,0 +1,59 @@
+﻿<Window x:Class="InventoryManagerUI.MainWindows.BusinessTypeWindow.SoleTraderTypeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagerUI.MainWindows.BusinessTypeWindow"
+        mc:Ignorable="d"
+        Title="Sole Proprietorship" Height="300" Width="500" Background="#2e3030" Foreground="AliceBlue" 
+        FontFamily="Segoe UI Light" FontSize="20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock x:Name="companyName" Grid.Column="0" Grid.Row="0" Text="Company Name"  Padding="20,20"/>
+        <TextBox x:Name="companyNameTextBox"  Grid.Column="0" Grid.Row="0" Height="40" Grid.ColumnSpan="3" Margin="212,22,0,10"/>
+
+        <TextBlock x:Name="companyBudget" Text="Company Current Budget" Grid.Column="0" Grid.Row="1" Padding="20,20"/>
+        <TextBox x:Name="companyBudgetTextBox" Grid.Column="1" Grid.Row="1" 
+                         Width="146" Height="40" HorizontalAlignment="Left" Margin="0,14,0,13"/>
+
+        <ComboBox x:Name="currencyComboBox" Background="Azure" 
+                      Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" 
+                      Height="40" Width="50" >
+        </ComboBox>
+
+        <TextBlock x:Name="companySpendings" Text="Current Spendings" Grid.Column="0" Grid.Row="2" Padding="20,20"/>
+        <TextBox x:Name="companyCurrentSpendingTextBox" Grid.Column="1" Grid.Row="2" 
+                         Width="146" Height="40" HorizontalAlignment="Left" Margin="0,13,0,14"/>
+
+
+
+        <!-- Lower Side Buttons-->
+        <Button x:Name="StartCompanyButton" Grid.Column="0" Grid.Row="5" 
+                    Background="Transparent" Foreground="DarkOrange" BorderThickness="1"  Width="200" Height="40"
+                    Click="StartCompanyButton_Click" >
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Complete</TextBlock>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

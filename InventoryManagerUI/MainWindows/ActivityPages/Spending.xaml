@@ -1,0 +1,73 @@
+﻿<Page x:Class="InventoryManagerUI.MainWindows.ActivityPages.Spending"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventoryManagerUI.MainWindows.ActivityPages"
+      xmlns:usercontrols="clr-namespace:InventoryManagerUI.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Spending" FontSize="15" FontFamily="Segoe UI Light"  Foreground="AliceBlue">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Background="#2e3040" NavigationUIVisibility="Hidden"
+               Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="10" Grid.RowSpan="5">
+        </Frame>
+
+        <TextBlock Text="Last Year" Grid.Column="1" Grid.Row="1"
+                   FontSize="25" Margin="34,13,569,300"/>
+
+        <usercontrols:YearGraph x:Name="lastYearGraph" Grid.Column="1" Grid.Row="1" Margin="72,46,408,34" />
+
+
+        <ScrollViewer Grid.Column="1" Grid.Row="1"  Margin="356,66,60,193" Background="#2e3040">
+            <ListView  Background="#2e3040" Foreground="AliceBlue"
+                   Focusable="False" 
+            x:Name="spendigsListView" Height="206">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn  DisplayMemberBinding="{ Binding Id}" 
+                                    Header="Id" Width="30" ToolBarTray.IsLocked="False"/>
+                        <GridViewColumn DisplayMemberBinding="{ Binding Name}" 
+                                    Header="Product Name" Width="150"/>
+                        <GridViewColumn DisplayMemberBinding="{ Binding Quantity}" 
+                                    Header="Quantity" Width="60"/>
+                        <GridViewColumn DisplayMemberBinding="{ Binding Price}"
+                        Header="Price" Width="60"/>
+                        <GridViewColumn DisplayMemberBinding="{ Binding ReceiptDate}"
+                        Header="ReceiptDate" Width="100"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+
+        <TextBlock Text="Last Year Total Spendings:" Grid.Column="1" Grid.Row="1" Foreground="DarkOrange"
+                   FontSize="18" Margin="356,277,247,160"/>
+
+        <TextBlock x:Name="totalSpendings" Text="200 000 000 " Grid.Column="1" Grid.Row="1"
+                   FontSize="18" Margin="565,277,38,160"/>
+
+        <TextBlock x:Name="currency" Text="$" Grid.Column="1" Grid.Row="1"
+                   FontSize="18" Margin="670,277,-67,160" Grid.ColumnSpan="4"/>
+
+
+
+    </Grid>
+</Page>

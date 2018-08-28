@@ -1,0 +1,93 @@
+﻿<Page x:Class="InventoryManagerUI.MainWindows.ActivityPages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:System="clr-namespace:System;assembly=mscorlib"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventoryManagerUI.MainWindows.ActivityPages"
+      xmlns:usercontrols="clr-namespace:InventoryManagerUI.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home" FontSize="15" FontFamily="Segoe UI Light"  Foreground="AliceBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Background="#2e3040" NavigationUIVisibility="Hidden"
+               Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="10" Grid.RowSpan="5">
+        </Frame>
+
+        <TextBlock Text="Where Your Money Goes :" Foreground="DarkOrange"
+                   Grid.Column="1" Grid.Row="1" Padding="20" />
+
+        <!--Top Stacked Panel-->
+        <StackPanel  Grid.Column="1" Grid.Row="2" Margin="50,-10" 
+                     Orientation="Horizontal">
+            <!--Total spending-->
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Total Spending" Padding="20" Foreground="Wheat" FontFamily="Segoe UI Symbol" FontSize="18" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="totalmoneySpentValue" Text="10,000" Margin="40,0" FontSize="20" FontFamily="Segoe UI Symbol" FontWeight="Bold"/>
+                </StackPanel>
+
+                <Button x:Name="MoneySpentHistory"
+                Background="Transparent" Foreground="DeepSkyBlue" BorderThickness="1"
+                HorizontalAlignment="Left" Margin="0,10" FontStretch="SemiCondensed"
+                Click="MoneySpentHistory_Click" TextOptions.TextHintingMode="Animated" >
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Examine your spending</TextBlock>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Last Month Spending" Padding="20" Foreground="Wheat" FontFamily="Segoe UI Symbol" FontSize="18" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="lastMonthMoneySpent" Text="10,000" Margin="40,0" FontSize="20" FontFamily="Segoe UI Symbol" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+        <TextBlock Text="Budget" Margin="30,10,49,0" Grid.Column="1" Grid.Row="3" Padding="20"/>
+        <!-- Budget progress bar-->
+        <StackPanel Grid.Column="1" Grid.Row="3" Margin="20">
+            <TextBlock Text="Current" Margin="90,-24" Foreground="Goldenrod"/>
+            <TextBlock x:Name="currentSpentValue" Margin="150,-24" Text="( 200 € )" Foreground="LightGray" />
+
+            <TextBlock Text="Total" Margin="230,-24" Foreground="Goldenrod"/>
+            <TextBlock x:Name="budgetValue" Margin="270,-24" Text="( 600 € )" Foreground="LightGray"/>
+
+            <Border Width="400" Height="40"
+                    BorderBrush="Gray" BorderThickness="1">
+                <Border x:Name="progressBudgetBar" Width="400" Height="40"
+                         BorderBrush="Gray" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-1">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="White" Offset="0.0"/>
+                            <GradientStop Color="DarkOrange" Offset="0.0"/>
+
+                        </LinearGradientBrush >
+                    </Border.Background>
+                </Border>
+            </Border>
+
+        </StackPanel>
+
+        <usercontrols:YearGraph x:Name="yearGraph" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Margin="557,20,-6,0" Grid.RowSpan="3" ></usercontrols:YearGraph>
+
+    </Grid>
+
+</Page>

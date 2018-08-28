@@ -1,0 +1,71 @@
+﻿<Window x:Class="InventoryManagerUI.MainWindows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagerUI.MainWindows"
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="400" Background="#2e3030" Foreground="AliceBlue" 
+        FontFamily="Segoe UI Light" FontSize="25">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Login" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Grid.ColumnSpan="3" 
+                   FontSize="48" FontFamily="Orator Std" Foreground="DarkOrange"/>
+
+        <!-- Username-->
+        <TextBlock Text="Username" Grid.Row="2" 
+                   Grid.Column="1" HorizontalAlignment="Center" Grid.ColumnSpan="3" 
+                   FontSize="28" FontFamily="Orator Std" Padding="10"/>
+
+        <TextBox Grid.Column="2" Grid.Row="2" x:Name="usernameField"
+                 Width="200" Height="40" HorizontalAlignment="Center" Grid.ColumnSpan="2" />
+
+        <!-- Password-->
+        <TextBlock Text="Password" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center"  
+                   FontSize="28" FontFamily="Orator Std" Padding="10" />
+
+        <PasswordBox Grid.Column="2" Grid.Row="5" x:Name="passwordField"
+                 Width="200" Height="40" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+
+
+        <!-- Buttons -->
+        <Button x:Name="LoginButton" 
+            Grid.Column="1" Grid.Row="6" Background="Transparent" Foreground="AntiqueWhite"
+                Cursor="Hand" HorizontalAlignment="Center" Click="LoginButton_Click"
+                 Grid.ColumnSpan="2" Padding="25">
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/home.png" Stretch="None"/>
+                <TextBlock>Login</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button x:Name="RegisterButtpn" 
+            Grid.Column="1" Grid.Row="6" Background="Transparent" Foreground="AntiqueWhite"
+                Cursor="Hand" HorizontalAlignment="Right" Click="RegisterButtpn_Click"
+                Grid.ColumnSpan="3" Padding="25">
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/home.png" Stretch="None"/>
+                <TextBlock>Register</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
