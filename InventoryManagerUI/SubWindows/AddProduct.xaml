@@ -1,0 +1,80 @@
+﻿<Window x:Class="InventoryManagerUI.SubWindows.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagerUI"
+        mc:Ignorable="d"
+        Title="Add Product" Height="400" Width="500" Background="#2e3030" Foreground="AliceBlue" 
+        FontFamily="Segoe UI Light" FontSize="25">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Product Name" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="productNameTextBox" Grid.Column="2" Grid.Row="1"
+                     Width="200"/>
+
+        <TextBlock Text="Product Type" Grid.Column="1" Grid.Row="2" />
+        <TextBox x:Name="productTypeTextBox" Width="200" Grid.Column="2" Grid.Row="2"  />
+
+        <TextBlock Text="Quantity" Grid.Column="1" Grid.Row="3" />
+        <TextBox x:Name="productQuantityTextBox" Width="100" Grid.Column="2" Grid.Row="3" PreviewTextInput="Quantity_PreviewTextInput" HorizontalAlignment="Left" />
+
+        <TextBlock Text="Price" Grid.Column="1" Grid.Row="4" />
+        <TextBox x:Name="productPriceTextBox" Width="100" Grid.Column="2" Grid.Row="4"  HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Provider Name" Grid.Column="1" Grid.Row="5" />
+        <TextBox x:Name="productProviderNameTextBox" Width="200" Grid.Column="2" Grid.Row="5" />
+
+        <TextBlock Text="Receipt Date" Grid.Column="1" Grid.Row="6" />
+        <TextBox x:Name="productReceiptDateTextBox" Width="200" Grid.Column="2" Grid.Row="6" />
+        
+        <TextBlock Text="Location" Grid.Column="1" Grid.Row="7" />
+        <TextBox x:Name="productLocationTextBox" Width="200" Grid.Column="2" Grid.Row="7" />
+        
+
+
+        <Button x:Name="saveProductButton"  
+            Grid.Column="1" Grid.Row="8"  Padding="15" 
+                Background="Transparent" Foreground="AntiqueWhite" BorderThickness="0"
+                Cursor="Hand" HorizontalAlignment="Left" 
+                Click="saveProductButton_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/purchase.png" Stretch="None"/>
+                <TextBlock Text="Save Product"/>
+            </StackPanel>
+        </Button>
+
+        <!-- Message notifier-->
+        <TextBlock x:Name="messageNotifier" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="9" />
+        
+    </Grid>
+</Window>
