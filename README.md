@@ -1,6 +1,6 @@
 # Business and Inventory Manager
-A Simple Management app for diffrent types of businesses with a good inventory management system made in C# with WPF.
-It uses SQLite as the main database.
+A Simple Management app for diffrent types of businesses with a good inventory management system made in C# with WPF using the MVVM Pattern.
+I've used SQLite as the main database.
 
 
 > The Main window , the Dashboard , is the hub for all other tabs. This is an example of custom dashboard. However, when the user
