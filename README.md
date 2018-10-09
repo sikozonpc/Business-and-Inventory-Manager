@@ -14,7 +14,7 @@ creates an account its auto-generates the necessary tabs for his business model.
 
 
 # The process
-With this app I was aiming to learn WPF and perfect my XAML skills ( since I've worked with XAML in my Xamarin Android project). However , I ended up spending a lot more time than I was expecting, but it's a good thing because I learnt SQLite, DataBindings , MVVM ( even tho I didn't apllied here) and many other things that made myself a better programmer, of course that there is still some erros and TODO's that I'am aware of , but all in all this app is the most complex I've done.
+With this app I was aiming to learn WPF and perfect my XAML skills ( since I've worked with XAML in my Xamarin Android project). However , I ended up spending a lot more time than I was expecting, but it's a good thing because I learnt SQLite, DataBindings , MVVM and many other things that made myself a better programmer, of course that there is still some erros and TODO's that I'am aware of , but all in all this app is the most complex I've done.
 
 # Copyrights 
 Feel free to commit your changes and requests. I would be very interested in any work that originates from this project. I would be more than happy to hear from your impressions and results.Also,  I don't mind that you create your own project from this one.
